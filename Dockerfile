@@ -1,6 +1,6 @@
-FROM ubuntu:18.04
+FROM alpine:3.10
 
-RUN apt-get update && apt-get install -y curl unzip git jq openssh-server
+RUN ["/bin/sh", "-c", "apk add --update --no-cache bash ca-certificates curl git jq openssh"]
 
 RUN ["bin/sh", "-c", "mkdir -p /src"]
 
