@@ -1,6 +1,6 @@
-FROM alpine:3 
+FROM ubuntu:19.04
 
-RUN ["/bin/sh", "-c", "apk add --update --no-cache bash ca-certificates curl git jq openssh"]
+RUN ["/bin/sh", "-c", "apt install bash ca-certificates curl git jq openssh"]
 
 RUN ["bin/sh", "-c", "mkdir -p /src"]
 
